@@ -1,4 +1,4 @@
-const url = 'https://raw.githubusercontent.com/yoelysfigueredopadron/JSON/main/productos3.json';
+const url = 'js/listaProductos.json';
 const file = '../data/productos3.json';
 const containerProducts = document.getElementById('container-products');
 const modal = document.getElementById('ventana-modal');
@@ -317,9 +317,9 @@ async function realizarPeticion(datos) {
 }
 
 async function renderizarProductos() {
-    // Llamar a la función y pasarle la URL de la API que deseas consultar
-    // const productos = await realizarPeticion(url);
-    const productos = await realizarPeticion(file);
+    // Llamar a la función y pasarle la URL de la API
+    const productos = await realizarPeticion(url);
+    //const productos = await realizarPeticion(file);
     // console.log(productos);
 
     recorrerArray(productos);

@@ -252,7 +252,7 @@ body {
 
 .modal-body {
     padding: 2px 16px;
-    background-color: #ccc;
+    background-color: beige;
     overflow-y: auto;
 }
 
@@ -270,7 +270,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 130;
+    height: 130px;
     background-color: #ffffff;
     margin: 5px 0;
 }
