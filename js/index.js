@@ -1,5 +1,5 @@
-const url = 'js/listaProductos.json';
-const file = '../data/productos3.json';
+var version = 2;
+const files = 'js/listaProductos.json?version=' + version ;
 const containerProducts = document.getElementById('container-products');
 const modal = document.getElementById('ventana-modal');
 const carrito = document.getElementById('carrito');
@@ -15,6 +15,8 @@ const inputFiltar = document.querySelector('#input-filtro');
 const btnFiltro = document.querySelector('#filtro');
 let productosCarrito = [];
 
+
+//agregar productos///////////////////////////////////
 const Toast = Swal.mixin({
     toast: true,
     position: 'top-end',
@@ -24,6 +26,14 @@ const Toast = Swal.mixin({
     timer: 1000,
     timerProgressBar: true,
 });
+////////////////////////////////////////////
+
+///////////////////////////////////////////////////
+cargarEventos();
+/////////////////////////////////////////////////
+
+
+
 
 class Producto {
     constructor(imagen, nombre, precio, id) {
@@ -40,14 +50,11 @@ class Producto {
     }
 }
 
-cargarEventos();
-
 function cargarEventos() {
     iconMenu.addEventListener('click', showMenu);
 
     document.addEventListener('DOMContentLoaded', () => {
         renderizarProductos();
-        // productosCarrito = JSON.parse(localStorage.getItem('productosLS')) || [];
         cargarCarritoLocalStorage();
         mostrarProductosCarrito();
     });
@@ -74,6 +81,7 @@ function cargarEventos() {
         }
     };
 }
+
 
 function ocultarModal() {
     modal.style.display = 'none';
@@ -318,24 +326,11 @@ async function realizarPeticion(datos) {
 
 async function renderizarProductos() {
     // Llamar a la función y pasarle la URL de la API
-    const productos = await realizarPeticion(url);
-    //const productos = await realizarPeticion(file);
-    // console.log(productos);
+    const productos = await realizarPeticion(files);
 
     recorrerArray(productos);
 
-    // productos.forEach((producto) => {
-    //     const divCard = document.createElement('div');
-    //     divCard.classList.add('card');
-    //     divCard.innerHTML += `
-    // 		<img src="./img/${producto.img}" alt="${producto.nombre}" />
-    // 		<h4>${producto.nombre}</h4>
-    // 		<p>$${producto.precio}</p>
-    // 		<a id=${producto.id} class="boton agregar-carrito" href="#">Agregar</a>
-    //     `;
 
-    //     containerProducts.appendChild(divCard);
-    // });
 }
 
 function recorrerArray(arregloProductos) {
@@ -356,17 +351,11 @@ function recorrerArray(arregloProductos) {
 function showMenu() {
     let navbar = document.getElementById('myTopnav');
 
-    // if (navbar.className === 'topnav') {
-    //     navbar.className += ' responsive';
-    // } else {
-    //     navbar.className = 'topnav';
-    // }
-
     navbar.className = navbar.className === 'topnav' ? (navbar.className += ' responsive') : (navbar.className = 'topnav');
 }
 
 async function filtrarProductos() {
-    const productos = await realizarPeticion(file);
+    const productos = await realizarPeticion(files);
     let productosFiltrados, filtro;
 
     filtro = inputFiltar.value.toLowerCase();
