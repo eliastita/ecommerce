@@ -324,3 +324,35 @@ body {
 .boton-standar {
     margin-bottom: 12px;
 }
+
+.hdlogo {
+    width: 50px;
+    height: 50px;
+    padding: -10px;
+    float: right;
+    hspace: 10px;
+}
+
+footer.subs {
+    color: white;
+    text-align: left;
+    background-image: url(https://i.gifer.com/KzDn.gif);
+    background-size: cover;
+    background-position: 400px 20px;
+    background-attachment: fixed;
+    margin-bottom: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer.subs input {
+    background-color: transparent;
+    max-width: 300px;
+}
+footer.subs .hr {
+    margin: 15px 5px;
+    width: 450px;
+    border: 1px solid white;
+}
