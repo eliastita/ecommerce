@@ -19,7 +19,7 @@ body {
 /* estilos barra de navegación */
 .barraNavg {
     overflow: hidden;
-    background-color: red;
+    background-color: #e51e2a;
     position: fixed;
     width: 100%;
     top: 0;
@@ -43,7 +43,7 @@ body {
 }
 
 .barraNavg a.active {
-    background-color: red;
+    background-color: #e51e2a;
     color: white;
 }
 
@@ -91,15 +91,15 @@ body {
 
 .title {
     text-align: center;
-    font-size: 40px;
     margin-top: 50px;
     font-weight: 400;
     font-family: Arial Black, serif;
     font-size: 40px;
     color: #fff;
     text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-    background-color: red;
+    background-color: #e51e2a;
 }
+
 
 .search-container {
     position: relative;
@@ -173,7 +173,7 @@ body {
     margin: 4px 4px;
     transition-duration: 0.4s;
     cursor: pointer;
-    border: none;
+    border: 2px solid white;
     border-radius: 8px;
 }
 
@@ -333,18 +333,25 @@ body {
     hspace: 10px;
 }
 
+
+
 footer.subs {
     color: white;
-    text-align: left;
-    background-image: url(https://i.gifer.com/KzDn.gif);
-    background-size: cover;
-    background-position: 400px 20px;
+    background-color: #e51e2a;
+    background-position: 400px 80px;
     background-attachment: fixed;
     margin-bottom: 0;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
 }
 
 footer.subs input {
@@ -356,3 +363,26 @@ footer.subs .hr {
     width: 450px;
     border: 1px solid white;
 }
+
+footer.subs .container-foot >h2{
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 400;
+    font-family: Arial Black, serif;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    order: 1;
+    display:inline;
+}
+
+footer.subs .container-foot >a{
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 400;
+    color: #fff;
+    order: 2;
+
+}
+
+
