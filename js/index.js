@@ -88,17 +88,18 @@ function cargarEventos() {
 }
 
 function subscrpcion(){
+    let idInput = document.getElementById("idInputSub");
+    let id = idInput.value;
     Swal.fire({
         icon: 'success',
         title: 'Subscripcion exitosa',
-        text: '¡revise su casilla de mail y recibira ofertas a partir de ahora!',
+        text: `${id}`+' recibira ofertas a partir de ahora!',
         timerProgressBar: true,
         timer: 5000,
     });
 
     //vaciar
-    let idInput = document.getElementById("idInputSub");
-    let id = idInput.value;
+
     idInput.value = "";
 
 
