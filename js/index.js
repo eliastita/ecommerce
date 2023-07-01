@@ -13,7 +13,10 @@ const finalizarCompra = document.querySelector('#finalizar-compra');
 const vaciarCarrito = document.querySelector('#vaciar-carrito');
 const inputFiltar = document.querySelector('#input-filtro');
 const btnFiltro = document.querySelector('#filtro');
+const subs = document.querySelector("#subscripcion")
+
 let productosCarrito = [];
+
 
 
 //agregar productos///////////////////////////////////
@@ -50,6 +53,7 @@ class Producto {
     }
 }
 
+
 function cargarEventos() {
     iconMenu.addEventListener('click', showMenu);
 
@@ -64,6 +68,7 @@ function cargarEventos() {
     finalizarCompra.addEventListener('click', compraFinalizada);
     vaciarCarrito.addEventListener('click', limpiarCarrito);
     btnFiltro.addEventListener('click', filtrarProductos);
+    subs.addEventListener('click',subscrpcion)
 
     carrito.onclick = function () {
         modal.style.display = 'block';
@@ -82,6 +87,22 @@ function cargarEventos() {
     };
 }
 
+function subscrpcion(){
+    Swal.fire({
+        icon: 'success',
+        title: 'Subscripcion exitosa',
+        text: '¡revise su casilla de mail y recibira ofertas a partir de ahora!',
+        timerProgressBar: true,
+        timer: 5000,
+    });
+
+    //vaciar
+    let idInput = document.getElementById("idInputSub");
+    let id = idInput.value;
+    idInput.value = "";
+
+
+}
 
 function ocultarModal() {
     modal.style.display = 'none';
