@@ -183,18 +183,7 @@ function alertProducto(icono, titulo, colorFondo) {
 }
 
 function leerDatosProducto(producto) {
-    // console.log(producto);
 
-    // const datosProducto = {
-    //     imagen: producto.querySelector('img').src,
-    //     nombre: producto.querySelector('h4').textContent,
-    //     precio: Number(producto.querySelector('p').textContent.replace('$', '')),
-    //     id: parseInt(producto.querySelector('a').getAttribute('id')),
-    //     cantidad: 1,
-    //     subtotal: 0,
-    // };
-
-    // datosProducto.subtotal = datosProducto.precio * datosProducto.cantidad;
 
     // creamos el objeto utilizando la clase Producto
     const datosProducto = new Producto(
@@ -205,17 +194,15 @@ function leerDatosProducto(producto) {
     );
 
     datosProducto.obtenerTotal();
-    // console.log(datosProducto);
+
 
     agregarAlCarrito(datosProducto);
 }
 
 function agregarAlCarrito(productoAgregar) {
-    // console.log(productoAgregar);
-    // console.log(productosCarrito);
+
 
     const existeEnCarrito = productosCarrito.some((producto) => producto.id === productoAgregar.id);
-    // console.log(existeEnCarrito);
 
     if (existeEnCarrito) {
         // Creamos un nuevo array con los productos del carrito actualizados

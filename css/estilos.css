@@ -13,7 +13,7 @@ body {
     letter-spacing: 0.03em;
     line-height: 1.6;
     font-family: 'Open Sans', sans-serif;
-    background-color: beige;
+    background-color: #161616;
 }
 
 /* estilos barra de navegación */
@@ -96,7 +96,6 @@ body {
     font-family: Arial Black, serif;
     font-size: 40px;
     color: #fff;
-    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
     background-color: #e51e2a;
 }
 
@@ -114,6 +113,7 @@ body {
     padding: 12px 20px 12px 20px;
     border: 1px solid #ddd;
     margin-bottom: 12px;
+
 }
 
 /* estilos del card */
@@ -131,8 +131,8 @@ body {
     width: 330px;
     height: 430px;
     border-radius: 8px;
-    box-shadow: 0 5px 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
+    box-shadow: 0 0.1px 0.1px #fefefe;
     margin: 20px;
     text-align: center;
     transition: all 0.25s;
@@ -151,6 +151,7 @@ body {
 .container .card h4 {
     font-weight: 600;
     margin: 8px auto;
+    color: #fff;
 }
 
 .container .card p {
@@ -158,6 +159,7 @@ body {
     font-size: 16px;
     font-weight: 300;
     margin: 8px auto;
+    color: #fff;
 }
 
 .container .card .boton,
@@ -249,19 +251,19 @@ body {
 
 .modal-header {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #e51e2a;
     color: white;
 }
 
 .modal-body {
     padding: 2px 16px;
-    background-color: beige;
+    background-color: #161616;
     overflow-y: auto;
 }
 
 .modal-footer {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #e51e2a;
     color: white;
     display: flex;
     flex-direction: row;
@@ -371,7 +373,6 @@ footer.subs .container-foot >h2{
     font-family: Arial Black, serif;
     font-size: 20px;
     color: #fff;
-    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
     order: 1;
     display:inline;
 }
