@@ -86,18 +86,32 @@ function cargarEventos() {
         }
     };
 }
+function validarEmail(valor) {
+    return /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(valor);
+}
 
 function subscrpcion(){
     let idInput = document.getElementById("idInputSub");
     let id = idInput.value;
-    Swal.fire({
-        icon: 'success',
-        title: 'Subscripcion exitosa',
-        text: `${id}`+' recibira ofertas a partir de ahora!',
-        timerProgressBar: true,
-        timer: 5000,
-    });
-
+    ban = validarEmail(id)
+    if (ban){
+        Swal.fire({
+            icon: 'success',
+            title: 'Subscripcion exitosa',
+            text: `${id}`+' recibira ofertas a partir de ahora!',
+            timerProgressBar: true,
+            timer: 5000,
+        });
+    }
+    else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Subscripcion fallida',
+            text: "ingrese un mail valido",
+            timerProgressBar: true,
+            timer: 5000,
+        });
+    }
     //vaciar
 
     idInput.value = "";
