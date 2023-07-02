@@ -73,18 +73,18 @@ function cargarEventos() {
     carrito.onclick = function () {
         modal.style.display = 'block';
     };
+// pagina responsive berreta
+/*   btnClose.onclick = function () {*/
+/*       // modal.style.display = 'none';*/
+/*       ocultarModal();*/
+/*   };*/
 
-    btnClose.onclick = function () {
-        // modal.style.display = 'none';
-        ocultarModal();
-    };
-
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            // modal.style.display = 'none';
-            ocultarModal();
-        }
-    };
+/*   window.onclick = function (event) {*/
+/*       if (event.target == modal) {*/
+/*           // modal.style.display = 'none';*/
+/*           ocultarModal();*/
+/*       }*/
+/*   };*/
 }
 function validarEmail(valor) {
     return /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(valor);
